@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart</title>
+</head>
+<body>
+    <div class="shadow-lg rounded-lg overflow-hidden m-10">
+        <div class="py-3 px-5 bg-gray-50"></div>
+        <canvas class="p-10" id="chartPie"></canvas>
+      </div>
+      
+   
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+    
+      <script>
+        const dataPie = {
+          labels: ["ReactJS", "Typescript", "Tailwind"],
+          datasets: [
+            {
+              label: "My First Dataset",
+              data: [300, 50, 100],
+              backgroundColor: [
+                "rgb(133, 105, 241)",
+                "rgb(164, 101, 241)",
+                "rgb(101, 143, 241)",
+              ],
+              hoverOffset: 4,
+            },
+          ],
+        };
+      
+        const configPie = {
+          type: "pie",
+          data: dataPie,
+          options: {},
+        };
+      
+        var chartBar = new Chart(document.getElementById("chartPie"), configPie);
+      </script>
+</body>
+</html>
